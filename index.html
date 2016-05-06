@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap -->
+	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="bootstrap/css/sidebar.css" rel="stylesheet">
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="col-xs-6 col-md-8">
+				<div class="row" style="padding-top: 1em; padding-right: 1em;">
+					<p class="lead">
+						Welcome to my website! I am a BS/MS student at the University of Utah, interested in machine learning and natural language processing.
+					</p>
+					<div class="maks-info">
+
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<div class="row">
+					<h2>Maks Cegielski-Johnson</h2>
+					<table class="table">
+						<tr><td>Computer Science</td></tr>
+						<tr><td>Mathematics</td></tr>
+						<tr><td>Cognitive Science</td></tr>
+						<tr><td><button class="btn btn-link" onclick="myFunction()">Projects</button>
+						<tr><td><button class="btn btn-link" onclick="myFunction()">Work</button>
+						<tr><td><button class="btn btn-link" onclick="myFunction()">School</button>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			function myFunction(){
+				$.ajax({
+				    url : "./jobs.html",
+				    success : function(result){
+				        $(".maks-info").html(result);
+				    }
+				});
+				
+			}
+		</script>
+	</body>
+</html>
