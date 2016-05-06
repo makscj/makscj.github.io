@@ -33,9 +33,9 @@
 						<tr><td>Computer Science</td></tr>
 						<tr><td>Mathematics</td></tr>
 						<tr><td>Cognitive Science</td></tr>
-						<tr><td><button class="btn btn-link" onclick="myFunction()">Projects</button>
-						<tr><td><button class="btn btn-link" onclick="myFunction()">Work</button>
-						<tr><td><button class="btn btn-link" onclick="myFunction()">School</button>
+						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/projects.html')">Projects</button>
+						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/jobs.html')">Work</button>
+						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/school.html')">School</button>
 					</table>
 					
 				</div>
@@ -47,9 +47,9 @@
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script>
-			function myFunction(){
+			function getAjax(website){
 				$.ajax({
-				    url : "./jobs.html",
+				    url : website,
 				    success : function(result){
 				        $(".maks-info").html(result);
 				    }
