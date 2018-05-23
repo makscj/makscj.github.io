@@ -1,0 +1,19 @@
+body {
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-weight: 100;
+}
+
+h3 {
+    color: #111;
+}
+
+#main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

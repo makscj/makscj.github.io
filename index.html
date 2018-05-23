@@ -3,64 +3,60 @@
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta http-equiv="refresh" content="0; URL='http://www.coe.utah.edu/~cegielsk/index.php'" />
 	<!-- Bootstrap -->
-	    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	    <link href="bootstrap/css/sidebar.css" rel="stylesheet">
+	    <!-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="bootstrap/css/sidebar.css" rel="stylesheet"> -->
+		
+		<link rel="stylesheet" href="sidebar.css">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="components.css">
 
-	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="navigation.js"></script>
+
 	</head>
 	
-	<body>
-	<h1>Redirecting</h1>
-	<!--
-		<div class="container">
-			<div class="col-xs-6 col-md-8">
-				<div class="row" style="padding-top: 1em; padding-right: 1em;">
-					<p class="lead">
-						Welcome to my website! I am a BS/MS student at the University of Utah, interested in machine learning and natural language processing.
-					</p>
-					<div class="maks-info">
+	<body onload="changeContent('home')">
 
-					</div>
-				</div>
+		<div id="header">
+			
+		</div>
+
+
+		<div id="main">
+			<div id="content">
+				
 			</div>
-			<div class="col-xs-6 col-md-4">
-				<div class="row">
-					<h2>Maks Cegielski-Johnson</h2>
-					<table class="table">
-						<tr><td>Computer Science</td></tr>
-						<tr><td>Mathematics</td></tr>
-						<tr><td>Cognitive Science</td></tr>
-						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/projects.html')">Projects</button>
-						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/jobs.html')">Work</button>
-						<tr><td><button class="btn btn-link" onclick="getAjax('./partials/school.html')">School</button>
-					</table>
-					
-				</div>
+
+			<div class="footer">
+			<a href="#">Linkedin</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="#">Instagram</a>
+			&nbsp;&nbsp;&nbsp;
+			<a href="#">Github</a>
 			</div>
 		</div>
-	-->
+
+
+		<div id="navigation">
+			<a onclick="changeContent('home')"><h4>Maks</h4></a>
+			<a onclick="changeContent('about')">About</a>
+			<a onclick="changeContent('projects')">Projects</a>
+			<a onclick="changeContent('resume')">Resume</a>
+			<a onclick="changeContent('photo')">Photo</a>
+			<a onclick="changeContent('music')">Music</a>
+		</div>
+
+		
+
+
+
+
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script>
-			function getAjax(website){
-				$.ajax({
-				    url : website,
-				    success : function(result){
-				        $(".maks-info").html(result);
-				    }
-				});
-				
-			}
-		</script>
+		
 	</body>
 </html>
